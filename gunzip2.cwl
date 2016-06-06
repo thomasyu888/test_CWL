@@ -20,6 +20,6 @@ outputs:
   - id: output
     type: File
     outputBinding:
-      glob: $(inputs.input.path.split(".").slice(0,-1).join("."))
+      glob: $(inputs.input.path.split(".").slice(0,-1).join(".").split("/").slice(-1)[0])
 
 baseCommand: [gunzip]
